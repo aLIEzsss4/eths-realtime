@@ -3,9 +3,8 @@ import EventSource from "eventsource";
 import { NextApiRequest, NextApiResponse } from 'next';
 // should be declared (!)
 export const dynamic = 'force-dynamic';
-export const config = {
-  runtime: "edge",
-};
+export const runtime = "edge"
+
 
 export function GET(req: NextApiRequest, res: NextApiResponse) {
   const table = 'ethscriptions'
