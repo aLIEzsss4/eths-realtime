@@ -1,40 +1,19 @@
-//@ts-nocheck
-// import supabase from '../../supabase';
-import EventSource from "eventsource";
 import { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
+import  EventSource  from "eventsource";
 
 // should be declared (!)
 export const dynamic = 'force-dynamic';
-export const runtime = "edge"
-
-
+export const runtime = "nodejs"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
-console.log(supabase.supabaseUrl)
 
+// console.log(supabase)
 
-
-export function  GET(req: NextApiRequest, res: NextApiResponse) {
-  const table = 'ethscriptions'
-  // const { action } = req.query;
-  // console.log({q:req,url:req.url})
-
-  // let subscription
-
-
-  // if (action == 'exit') {
-  //   supabase
-  //   .removeChannel('custom-all-channel')
-  //   .then(() => console.log('Unsubscribed from my_channel.'))
-  //   .catch(console.error);
-  // }
-
-  
-  // let arr=[]
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
   
 
   const { readable, writable } = new TransformStream();
@@ -50,13 +29,17 @@ export function  GET(req: NextApiRequest, res: NextApiResponse) {
         // console.log('Change received!', payload)
         const newData = JSON.stringify(payload.new)
         await writer.write(encoder.encode("data: " + newData + "\n\n"));
-       
       }
     )
     .subscribe()
 
-  
+    // const events =  new EventSource('http://localhost:8000/realtime')
 
+    // console.log(events,'events')
+      
+    // events.onmessage(async msg=>{
+    //   await writer.write(encoder.encode("data: " + msg + "\n\n"))
+    // })
 
   return new Response(readable, {
     headers: {
