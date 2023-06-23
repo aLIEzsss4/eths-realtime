@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 import  EventSource  from "eventsource";
 
 // should be declared (!)
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 export const runtime = "nodejs"
 
 const supabase = createClient(
