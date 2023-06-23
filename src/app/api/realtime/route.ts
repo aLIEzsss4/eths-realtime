@@ -4,7 +4,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 
 // should be declared (!)
-// export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 export const runtime = "edge"
 
 
@@ -13,6 +13,7 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
+console.log({supabase})
 
 
 export function GET(req: NextApiRequest, res: NextApiResponse) {
@@ -30,16 +31,7 @@ export function GET(req: NextApiRequest, res: NextApiResponse) {
   //   .catch(console.error);
   // }
 
-  // 订阅实时更新事件
-  // const subscription = supabase.from(table).on('*', (payload) => {
-  //   res.setHeader('Content-Type', 'text/event-stream;charset=UTF-8');
-  //   res.setHeader('Cache-Control', 'no-cache, no-transform');
-  //   res.setHeader('Connection', 'keep-alive');
-
-  //   console.log(1111)
-  //   // 将新数据发送给客户端
-  //   res.write(`data: ${JSON.stringify(payload)}\n\n`);
-  // }).subscribe();
+  
   // let arr=[]
   const { readable, writable } = new TransformStream();
   const writer = writable.getWriter();
@@ -54,18 +46,7 @@ export function GET(req: NextApiRequest, res: NextApiResponse) {
         // console.log('Change received!', payload)
         const newData = JSON.stringify(payload.new)
         await writer.write(encoder.encode("data: " + newData + "\n\n"));
-        //     res.setHeader('Content-Type', 'text/event-stream;charset=UTF-8');
-        // res.setHeader('Cache-Control', 'no-cache, no-transform');
-        // res.setHeader('Connection', 'keep-alive');
-
-        // res.writeHead(200, {
-        //   Connection: 'keep-alive',
-        //   'Content-Encoding': 'none',
-        //   'Cache-Control': 'no-cache, no-transform',
-        //   'Content-Type': 'text/event-stream',
-        // });
-        // res.write(`data: ${JSON.stringify(payload)}\n\n`);
-        //  arr=[...arr,payload]
+       
       }
     )
     .subscribe()
