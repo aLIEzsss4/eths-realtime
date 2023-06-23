@@ -13,7 +13,7 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 );
 
-console.log({supabase})
+console.log(supabase.supabaseUrl)
 
 
 export function GET(req: NextApiRequest, res: NextApiResponse) {
