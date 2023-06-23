@@ -1,9 +1,19 @@
-import supabase from '../../supabase';
+// import supabase from '../../supabase';
 import EventSource from "eventsource";
 import { NextApiRequest, NextApiResponse } from 'next';
+import { createClient } from '@supabase/supabase-js';
+
 // should be declared (!)
-export const dynamic = 'force-dynamic';
+// export const dynamic = 'force-dynamic';
 export const runtime = "edge"
+
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL,
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+);
+
+export default supabase;
 
 
 export function GET(req: NextApiRequest, res: NextApiResponse) {
