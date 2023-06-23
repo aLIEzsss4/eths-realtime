@@ -10,7 +10,7 @@ dependencies:
     version: registry.npmmirror.com/@rainbow-me/rainbowkit@1.0.2(@types/react@18.2.12)(react-dom@18.2.0)(react@18.2.0)(viem@1.0.7)(wagmi@1.2.0)
   '@supabase/supabase-js':
     specifier: ^2.26.0
-    version: 2.26.0
+    version: 2.26.0(encoding@0.1.13)
   '@types/node':
     specifier: 20.3.1
     version: registry.npmmirror.com/@types/node@20.3.1
@@ -20,12 +20,18 @@ dependencies:
   '@types/react-dom':
     specifier: 18.2.5
     version: registry.npmmirror.com/@types/react-dom@18.2.5
+  add:
+    specifier: ^2.0.6
+    version: 2.0.6
   autoprefixer:
     specifier: 10.4.14
     version: registry.npmmirror.com/autoprefixer@10.4.14(postcss@8.4.24)
   dayjs:
     specifier: ^1.11.8
     version: 1.11.8
+  encoding:
+    specifier: ^0.1.13
+    version: 0.1.13
   eslint:
     specifier: 8.43.0
     version: registry.npmmirror.com/eslint@8.43.0
@@ -35,9 +41,15 @@ dependencies:
   eventsource:
     specifier: ^2.0.2
     version: 2.0.2
+  lokijs:
+    specifier: 1.x
+    version: 1.5.12
   next:
     specifier: 13.4.6
     version: registry.npmmirror.com/next@13.4.6(react-dom@18.2.0)(react@18.2.0)
+  pino-pretty:
+    specifier: ^10.0.0
+    version: 10.0.0
   postcss:
     specifier: 8.4.24
     version: registry.npmmirror.com/postcss@8.4.24
@@ -58,7 +70,10 @@ dependencies:
     version: registry.npmmirror.com/viem@1.0.7(typescript@5.1.3)
   wagmi:
     specifier: ^1.2.0
-    version: registry.npmmirror.com/wagmi@1.2.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7)
+    version: registry.npmmirror.com/wagmi@1.2.0(encoding@0.1.13)(lokijs@1.5.12)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7)
+  yarn:
+    specifier: ^1.22.19
+    version: 1.22.19
 
 packages:
 
@@ -143,26 +158,26 @@ packages:
     dev: false
     optional: true
 
-  /@supabase/functions-js@2.1.2:
+  /@supabase/functions-js@2.1.2(encoding@0.1.13):
     resolution: {integrity: sha512-QCR6pwJs9exCl37bmpMisUd6mf+0SUBJ6mUpiAjEkSJ/+xW8TCuO14bvkWHADd5hElJK9MxNlMQXxSA4DRz9nQ==}
     dependencies:
-      cross-fetch: 3.1.6
+      cross-fetch: 3.1.6(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/gotrue-js@2.31.0:
+  /@supabase/gotrue-js@2.31.0(encoding@0.1.13):
     resolution: {integrity: sha512-YcwlbbNfedlue/HVIXtYBb4fuOrs29gNOTl6AmyxPp4zryRxzFvslVN9kmLDBRUAVU9fnPJh2bgOR3chRjJX5w==}
     dependencies:
-      cross-fetch: 3.1.6
+      cross-fetch: 3.1.6(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/postgrest-js@1.7.1:
+  /@supabase/postgrest-js@1.7.1(encoding@0.1.13):
     resolution: {integrity: sha512-xPRYLaZrkLbXNlzmHW6Wtf9hmcBLjjI5xUz2zj8oE2hgXGaYoZBBkpN9bmW9i17Z1f6Ujxa942AqK439XOA36A==}
     dependencies:
-      cross-fetch: 3.1.6
+      cross-fetch: 3.1.6(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -177,23 +192,23 @@ packages:
       - supports-color
     dev: false
 
-  /@supabase/storage-js@2.5.1:
+  /@supabase/storage-js@2.5.1(encoding@0.1.13):
     resolution: {integrity: sha512-nkR0fQA9ScAtIKA3vNoPEqbZv1k5B5HVRYEvRWdlP6mUpFphM9TwPL2jZ/ztNGMTG5xT6SrHr+H7Ykz8qzbhjw==}
     dependencies:
-      cross-fetch: 3.1.6
+      cross-fetch: 3.1.6(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/supabase-js@2.26.0:
+  /@supabase/supabase-js@2.26.0(encoding@0.1.13):
     resolution: {integrity: sha512-RXmTPTobaYAwkSobadHZmEVLmzX3SGrtRZIGfLWnLv92VzBRrjuXn0a+bJqKl50GUzsyqPA+j5pod7EwMkcH5A==}
     dependencies:
-      '@supabase/functions-js': 2.1.2
-      '@supabase/gotrue-js': 2.31.0
-      '@supabase/postgrest-js': 1.7.1
+      '@supabase/functions-js': 2.1.2(encoding@0.1.13)
+      '@supabase/gotrue-js': 2.31.0(encoding@0.1.13)
+      '@supabase/postgrest-js': 1.7.1(encoding@0.1.13)
       '@supabase/realtime-js': 2.7.3
-      '@supabase/storage-js': 2.5.1
-      cross-fetch: 3.1.6
+      '@supabase/storage-js': 2.5.1(encoding@0.1.13)
+      cross-fetch: 3.1.6(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -213,6 +228,43 @@ packages:
       '@types/node': 20.3.1
     dev: false
 
+  /abort-controller@3.0.0:
+    resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
+    engines: {node: '>=6.5'}
+    dependencies:
+      event-target-shim: 5.0.1
+    dev: false
+
+  /add@2.0.6:
+    resolution: {integrity: sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==}
+    dev: false
+
+  /atomic-sleep@1.0.0:
+    resolution: {integrity: sha512-kNOjDqAh7px0XWNI+4QbzoiR/nTkHAWNud2uvnJquD1/x5a7EQZMJT0AczqK0Qn67oY/TTQ1LbUKajZpp3I9tQ==}
+    engines: {node: '>=8.0.0'}
+    dev: false
+
+  /balanced-match@1.0.2:
+    resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+    dev: false
+
+  /base64-js@1.5.1:
+    resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+    dev: false
+
+  /brace-expansion@2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
+    dev: false
+
+  /buffer@6.0.3:
+    resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
+    dependencies:
+      base64-js: 1.5.1
+      ieee754: 1.2.1
+    dev: false
+
   /bufferutil@4.0.7:
     resolution: {integrity: sha512-kukuqc39WOHtdxtw4UScxF/WVnMFVSQVKhtx3AjZJzhd0RGZZldcrfSEbVsWWe6KNH253574cq5F+wpv0G9pJw==}
     engines: {node: '>=6.14.2'}
@@ -221,10 +273,14 @@ packages:
       node-gyp-build: registry.npmmirror.com/node-gyp-build@4.6.0
     dev: false
 
-  /cross-fetch@3.1.6:
+  /colorette@2.0.20:
+    resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
+    dev: false
+
+  /cross-fetch@3.1.6(encoding@0.1.13):
     resolution: {integrity: sha512-riRvo06crlE8HiqOwIpQhxwdOk4fOeR7FVM/wXoxchFEqMNUjvbs3bfo4OTgMEMHzppd4DxFBDbyySj8Cv781g==}
     dependencies:
-      node-fetch: 2.6.11
+      node-fetch: 2.6.11(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -234,6 +290,10 @@ packages:
     dependencies:
       es5-ext: 0.10.62
       type: 1.2.0
+    dev: false
+
+  /dateformat@4.6.3:
+    resolution: {integrity: sha512-2P0p0pFGzHS5EMnhdxQi7aJN+iMheud0UhG4dlE1DLAlvL8JHjJJTX/CSm4JXwV0Ka5nGk3zC5mcb5bUQUxxMA==}
     dev: false
 
   /dayjs@1.11.8:
@@ -249,6 +309,18 @@ packages:
         optional: true
     dependencies:
       ms: 2.0.0
+    dev: false
+
+  /encoding@0.1.13:
+    resolution: {integrity: sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==}
+    dependencies:
+      iconv-lite: 0.6.3
+    dev: false
+
+  /end-of-stream@1.4.4:
+    resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
+    dependencies:
+      once: 1.4.0
     dev: false
 
   /es5-ext@0.10.62:
@@ -276,6 +348,16 @@ packages:
       ext: 1.7.0
     dev: false
 
+  /event-target-shim@5.0.1:
+    resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /events@3.3.0:
+    resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
+    engines: {node: '>=0.8.x'}
+    dev: false
+
   /eventsource@2.0.2:
     resolution: {integrity: sha512-IzUmBGPR3+oUG9dUeXynyNmf91/3zUSJg1lCktzKw47OXuhco54U3r9B7O4XX+Rb1Itm9OZ2b0RkTs10bICOxA==}
     engines: {node: '>=12.0.0'}
@@ -287,6 +369,18 @@ packages:
       type: 2.7.2
     dev: false
 
+  /fast-copy@3.0.1:
+    resolution: {integrity: sha512-Knr7NOtK3HWRYGtHoJrjkaWepqT8thIVGAwt0p0aUs1zqkAzXZV4vo9fFNwyb5fcqK1GKYFYxldQdIDVKhUAfA==}
+    dev: false
+
+  /fast-safe-stringify@2.1.1:
+    resolution: {integrity: sha512-W+KJc2dmILlPplD/H4K9l9LcAHAfPtP6BY84uVLXQ6Evcz9Lcg33Y2z1IVblT6xdY54PXYVHEv+0Wpq8Io6zkA==}
+    dev: false
+
+  /fs.realpath@1.0.0:
+    resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
+    dev: false
+
   /fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -295,8 +389,68 @@ packages:
     dev: false
     optional: true
 
+  /glob@8.1.0:
+    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.1.6
+      once: 1.4.0
+    dev: false
+
+  /help-me@4.2.0:
+    resolution: {integrity: sha512-TAOnTB8Tz5Dw8penUuzHVrKNKlCIbwwbHnXraNJxPwf8LRtE2HlM84RYuezMFcwOJmoYOCWVDyJ8TQGxn9PgxA==}
+    dependencies:
+      glob: 8.1.0
+      readable-stream: 3.6.2
+    dev: false
+
+  /iconv-lite@0.6.3:
+    resolution: {integrity: sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      safer-buffer: 2.1.2
+    dev: false
+
+  /ieee754@1.2.1:
+    resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
+    dev: false
+
+  /inflight@1.0.6:
+    resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    dependencies:
+      once: 1.4.0
+      wrappy: 1.0.2
+    dev: false
+
+  /inherits@2.0.4:
+    resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
+    dev: false
+
   /is-typedarray@1.0.0:
     resolution: {integrity: sha512-cyA56iCMHAh5CdzjJIa4aohJyeO1YbwLi3Jc35MmRU6poroFjIGZzUzupGiRPOjgHg9TLu43xbpwXk523fMxKA==}
+    dev: false
+
+  /joycon@3.1.1:
+    resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
+    engines: {node: '>=10'}
+    dev: false
+
+  /lokijs@1.5.12:
+    resolution: {integrity: sha512-Q5ALD6JiS6xAUWCwX3taQmgwxyveCtIIuL08+ml0nHwT3k0S/GIFJN+Hd38b1qYIMaE5X++iqsqWVksz7SYW+Q==}
+    dev: false
+
+  /minimatch@5.1.6:
+    resolution: {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: false
+
+  /minimist@1.2.8:
+    resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: false
 
   /ms@2.0.0:
@@ -307,7 +461,7 @@ packages:
     resolution: {integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==}
     dev: false
 
-  /node-fetch@2.6.11:
+  /node-fetch@2.6.11(encoding@0.1.13):
     resolution: {integrity: sha512-4I6pdBY1EthSqDmJkiNk3JIT8cswwR9nfeW/cPdUagJYEQG7R95WRH74wpz7ma8Gh/9dI9FP+OU+0E4FvtA55w==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
@@ -316,7 +470,110 @@ packages:
       encoding:
         optional: true
     dependencies:
+      encoding: 0.1.13
       whatwg-url: 5.0.0
+    dev: false
+
+  /on-exit-leak-free@2.1.0:
+    resolution: {integrity: sha512-VuCaZZAjReZ3vUwgOB8LxAosIurDiAW0s13rI1YwmaP++jvcxP77AWoQvenZebpCA2m8WC1/EosPYPMjnRAp/w==}
+    dev: false
+
+  /once@1.4.0:
+    resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
+    dependencies:
+      wrappy: 1.0.2
+    dev: false
+
+  /pino-abstract-transport@1.0.0:
+    resolution: {integrity: sha512-c7vo5OpW4wIS42hUVcT5REsL8ZljsUfBjqV/e2sFxmFEFZiq1XLUp5EYLtuDH6PEHq9W1egWqRbnLUP5FuZmOA==}
+    dependencies:
+      readable-stream: 4.4.0
+      split2: 4.2.0
+    dev: false
+
+  /pino-pretty@10.0.0:
+    resolution: {integrity: sha512-zKFjYXBzLaLTEAN1ayKpHXtL5UeRQC7R3lvhKe7fWs7hIVEjKGG/qIXwQt9HmeUp71ogUd/YcW+LmMwRp4KT6Q==}
+    hasBin: true
+    dependencies:
+      colorette: 2.0.20
+      dateformat: 4.6.3
+      fast-copy: 3.0.1
+      fast-safe-stringify: 2.1.1
+      help-me: 4.2.0
+      joycon: 3.1.1
+      minimist: 1.2.8
+      on-exit-leak-free: 2.1.0
+      pino-abstract-transport: 1.0.0
+      pump: 3.0.0
+      readable-stream: 4.4.0
+      secure-json-parse: 2.7.0
+      sonic-boom: 3.3.0
+      strip-json-comments: 3.1.1
+    dev: false
+
+  /process@0.11.10:
+    resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
+    engines: {node: '>= 0.6.0'}
+    dev: false
+
+  /pump@3.0.0:
+    resolution: {integrity: sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==}
+    dependencies:
+      end-of-stream: 1.4.4
+      once: 1.4.0
+    dev: false
+
+  /readable-stream@3.6.2:
+    resolution: {integrity: sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==}
+    engines: {node: '>= 6'}
+    dependencies:
+      inherits: 2.0.4
+      string_decoder: 1.3.0
+      util-deprecate: 1.0.2
+    dev: false
+
+  /readable-stream@4.4.0:
+    resolution: {integrity: sha512-kDMOq0qLtxV9f/SQv522h8cxZBqNZXuXNyjyezmfAAuribMyVXziljpQ/uQhfE1XLg2/TLTW2DsnoE4VAi/krg==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dependencies:
+      abort-controller: 3.0.0
+      buffer: 6.0.3
+      events: 3.3.0
+      process: 0.11.10
+    dev: false
+
+  /safe-buffer@5.2.1:
+    resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
+    dev: false
+
+  /safer-buffer@2.1.2:
+    resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+    dev: false
+
+  /secure-json-parse@2.7.0:
+    resolution: {integrity: sha512-6aU+Rwsezw7VR8/nyvKTx8QpWH9FrcYiXXlqC4z5d5XQBDRqtbfsRjnwGyqbi3gddNtWHuEk9OANUotL26qKUw==}
+    dev: false
+
+  /sonic-boom@3.3.0:
+    resolution: {integrity: sha512-LYxp34KlZ1a2Jb8ZQgFCK3niIHzibdwtwNUWKg0qQRzsDoJ3Gfgkf8KdBTFU3SkejDEIlWwnSnpVdOZIhFMl/g==}
+    dependencies:
+      atomic-sleep: 1.0.0
+    dev: false
+
+  /split2@4.2.0:
+    resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
+    engines: {node: '>= 10.x'}
+    dev: false
+
+  /string_decoder@1.3.0:
+    resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
+    dependencies:
+      safe-buffer: 5.2.1
+    dev: false
+
+  /strip-json-comments@3.1.1:
+    resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
+    engines: {node: '>=8'}
     dev: false
 
   /tr46@0.0.3:
@@ -345,6 +602,10 @@ packages:
       node-gyp-build: registry.npmmirror.com/node-gyp-build@4.6.0
     dev: false
 
+  /util-deprecate@1.0.2:
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+    dev: false
+
   /webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
     dev: false
@@ -370,9 +631,20 @@ packages:
       webidl-conversions: 3.0.1
     dev: false
 
+  /wrappy@1.0.2:
+    resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
+    dev: false
+
   /yaeti@0.0.6:
     resolution: {integrity: sha512-MvQa//+KcZCUkBTIC9blM+CU9J2GzuTytsOUwf2lidtvkx/6gnEp1QvJv34t9vdjhFmha/mUiNDbN0D0mJWdug==}
     engines: {node: '>=0.10.32'}
+    dev: false
+
+  /yarn@1.22.19:
+    resolution: {integrity: sha512-/0V5q0WbslqnwP91tirOvldvYISzaqhClxzyUKXYxs07yUILIs5jx/k6CFe8bvKSkds5w+eiOqta39Wk3WxdcQ==}
+    engines: {node: '>=4.0.0'}
+    hasBin: true
+    requiresBuild: true
     dev: false
 
   registry.nlark.com/@nodelib/fs.scandir@2.1.5:
@@ -413,14 +685,15 @@ packages:
       regenerator-runtime: registry.npmmirror.com/regenerator-runtime@0.13.11
     dev: false
 
-  registry.npmmirror.com/@coinbase/wallet-sdk@3.7.1:
+  registry.npmmirror.com/@coinbase/wallet-sdk@3.7.1(encoding@0.1.13):
     resolution: {integrity: sha512-LjyoDCB+7p0waQXfK+fUgcAs3Ezk6S6e+LYaoFjpJ6c9VTop3NyZF40Pi7df4z7QJohCwzuIDjz0Rhtig6Y7Pg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@coinbase/wallet-sdk/-/wallet-sdk-3.7.1.tgz}
+    id: registry.npmmirror.com/@coinbase/wallet-sdk/3.7.1
     name: '@coinbase/wallet-sdk'
     version: 3.7.1
     engines: {node: '>= 10.0.0'}
     dependencies:
       '@metamask/safe-event-emitter': registry.npmmirror.com/@metamask/safe-event-emitter@2.0.0
-      '@solana/web3.js': registry.npmmirror.com/@solana/web3.js@1.77.3
+      '@solana/web3.js': registry.npmmirror.com/@solana/web3.js@1.77.3(encoding@0.1.13)
       bind-decorator: registry.npmmirror.com/bind-decorator@1.0.11
       bn.js: registry.npmmirror.com/bn.js@5.2.1
       buffer: registry.npmmirror.com/buffer@6.0.3
@@ -1195,7 +1468,7 @@ packages:
       react-dom: registry.npmmirror.com/react-dom@18.2.0(react@18.2.0)
       react-remove-scroll: registry.npmmirror.com/react-remove-scroll@2.5.4(@types/react@18.2.12)(react@18.2.0)
       viem: registry.npmmirror.com/viem@1.0.7(typescript@5.1.3)
-      wagmi: registry.npmmirror.com/wagmi@1.2.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7)
+      wagmi: registry.npmmirror.com/wagmi@1.2.0(encoding@0.1.13)(lokijs@1.5.12)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7)
     transitivePeerDependencies:
       - '@types/react'
     dev: false
@@ -1206,12 +1479,13 @@ packages:
     version: 1.3.2
     dev: false
 
-  registry.npmmirror.com/@safe-global/safe-apps-provider@0.15.2:
+  registry.npmmirror.com/@safe-global/safe-apps-provider@0.15.2(encoding@0.1.13):
     resolution: {integrity: sha512-BaoGAuY7h6jLBL7P+M6b7hd+1QfTv8uMyNF3udhiNUwA0XwfzH2ePQB13IEV3Mn7wdcIMEEUDS5kHbtAsj60qQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@safe-global/safe-apps-provider/-/safe-apps-provider-0.15.2.tgz}
+    id: registry.npmmirror.com/@safe-global/safe-apps-provider/0.15.2
     name: '@safe-global/safe-apps-provider'
     version: 0.15.2
     dependencies:
-      '@safe-global/safe-apps-sdk': registry.npmmirror.com/@safe-global/safe-apps-sdk@7.9.0
+      '@safe-global/safe-apps-sdk': registry.npmmirror.com/@safe-global/safe-apps-sdk@7.9.0(encoding@0.1.13)
       events: registry.npmmirror.com/events@3.3.0
     transitivePeerDependencies:
       - bufferutil
@@ -1219,12 +1493,13 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmmirror.com/@safe-global/safe-apps-sdk@7.11.0:
+  registry.npmmirror.com/@safe-global/safe-apps-sdk@7.11.0(encoding@0.1.13):
     resolution: {integrity: sha512-RDamzPM1Lhhiiz0O+Dn6FkFqIh47jmZX+HCV/BBnBBOSKfBJE//IGD3+02zMgojXHTikQAburdPes9qmH1SA1A==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@safe-global/safe-apps-sdk/-/safe-apps-sdk-7.11.0.tgz}
+    id: registry.npmmirror.com/@safe-global/safe-apps-sdk/7.11.0
     name: '@safe-global/safe-apps-sdk'
     version: 7.11.0
     dependencies:
-      '@safe-global/safe-gateway-typescript-sdk': registry.npmmirror.com/@safe-global/safe-gateway-typescript-sdk@3.7.3
+      '@safe-global/safe-gateway-typescript-sdk': registry.npmmirror.com/@safe-global/safe-gateway-typescript-sdk@3.7.3(encoding@0.1.13)
       ethers: registry.npmmirror.com/ethers@5.7.2
     transitivePeerDependencies:
       - bufferutil
@@ -1232,12 +1507,13 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmmirror.com/@safe-global/safe-apps-sdk@7.9.0:
+  registry.npmmirror.com/@safe-global/safe-apps-sdk@7.9.0(encoding@0.1.13):
     resolution: {integrity: sha512-S2EI+JL8ocSgE3uGNaDZCzKmwfhtxXZFDUP76vN0FeaY35itFMyi8F0Vhxu0XnZm3yLzJE3tp5px6GhuQFLU6w==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@safe-global/safe-apps-sdk/-/safe-apps-sdk-7.9.0.tgz}
+    id: registry.npmmirror.com/@safe-global/safe-apps-sdk/7.9.0
     name: '@safe-global/safe-apps-sdk'
     version: 7.9.0
     dependencies:
-      '@safe-global/safe-gateway-typescript-sdk': registry.npmmirror.com/@safe-global/safe-gateway-typescript-sdk@3.7.3
+      '@safe-global/safe-gateway-typescript-sdk': registry.npmmirror.com/@safe-global/safe-gateway-typescript-sdk@3.7.3(encoding@0.1.13)
       ethers: registry.npmmirror.com/ethers@5.7.2
     transitivePeerDependencies:
       - bufferutil
@@ -1245,12 +1521,13 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmmirror.com/@safe-global/safe-gateway-typescript-sdk@3.7.3:
+  registry.npmmirror.com/@safe-global/safe-gateway-typescript-sdk@3.7.3(encoding@0.1.13):
     resolution: {integrity: sha512-O6JCgXNZWG0Vv8FnOEjKfcbsP0WxGvoPJk5ufqUrsyBlHup16It6oaLnn+25nXFLBZOHI1bz8429JlqAc2t2hg==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@safe-global/safe-gateway-typescript-sdk/-/safe-gateway-typescript-sdk-3.7.3.tgz}
+    id: registry.npmmirror.com/@safe-global/safe-gateway-typescript-sdk/3.7.3
     name: '@safe-global/safe-gateway-typescript-sdk'
     version: 3.7.3
     dependencies:
-      cross-fetch: registry.npmmirror.com/cross-fetch@3.1.6
+      cross-fetch: registry.npmmirror.com/cross-fetch@3.1.6(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -1289,8 +1566,9 @@ packages:
       buffer: registry.npmmirror.com/buffer@6.0.3
     dev: false
 
-  registry.npmmirror.com/@solana/web3.js@1.77.3:
+  registry.npmmirror.com/@solana/web3.js@1.77.3(encoding@0.1.13):
     resolution: {integrity: sha512-PHaO0BdoiQRPpieC1p31wJsBaxwIOWLh8j2ocXNKX8boCQVldt26Jqm2tZE4KlrvnCIV78owPLv1pEUgqhxZ3w==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@solana/web3.js/-/web3.js-1.77.3.tgz}
+    id: registry.npmmirror.com/@solana/web3.js/1.77.3
     name: '@solana/web3.js'
     version: 1.77.3
     dependencies:
@@ -1306,7 +1584,7 @@ packages:
       buffer: registry.npmmirror.com/buffer@6.0.3
       fast-stable-stringify: registry.npmmirror.com/fast-stable-stringify@1.0.0
       jayson: registry.npmmirror.com/jayson@4.1.0
-      node-fetch: registry.npmmirror.com/node-fetch@2.6.11
+      node-fetch: registry.npmmirror.com/node-fetch@2.6.11(encoding@0.1.13)
       rpc-websockets: registry.npmmirror.com/rpc-websockets@7.5.1
       superstruct: registry.npmmirror.com/superstruct@0.14.2
     transitivePeerDependencies:
@@ -1746,7 +2024,7 @@ packages:
       typescript: registry.npmmirror.com/typescript@5.1.3
     dev: false
 
-  registry.npmmirror.com/@wagmi/connectors@2.2.0(@wagmi/chains@1.1.0)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7):
+  registry.npmmirror.com/@wagmi/connectors@2.2.0(@wagmi/chains@1.1.0)(encoding@0.1.13)(lokijs@1.5.12)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7):
     resolution: {integrity: sha512-pI1ed2V8dC8Gro0YbXrJedFj5U9HHD/zUe9MMUaV3ews2LY6qziSXZp9Dw6TKyiSJ5ANbRlZcl40AmSPozkZmw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@wagmi/connectors/-/connectors-2.2.0.tgz}
     id: registry.npmmirror.com/@wagmi/connectors/2.2.0
     name: '@wagmi/connectors'
@@ -1761,13 +2039,13 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@coinbase/wallet-sdk': registry.npmmirror.com/@coinbase/wallet-sdk@3.7.1
+      '@coinbase/wallet-sdk': registry.npmmirror.com/@coinbase/wallet-sdk@3.7.1(encoding@0.1.13)
       '@ledgerhq/connect-kit-loader': registry.npmmirror.com/@ledgerhq/connect-kit-loader@1.0.2
-      '@safe-global/safe-apps-provider': registry.npmmirror.com/@safe-global/safe-apps-provider@0.15.2
-      '@safe-global/safe-apps-sdk': registry.npmmirror.com/@safe-global/safe-apps-sdk@7.11.0
+      '@safe-global/safe-apps-provider': registry.npmmirror.com/@safe-global/safe-apps-provider@0.15.2(encoding@0.1.13)
+      '@safe-global/safe-apps-sdk': registry.npmmirror.com/@safe-global/safe-apps-sdk@7.11.0(encoding@0.1.13)
       '@wagmi/chains': registry.npmmirror.com/@wagmi/chains@1.1.0(typescript@5.1.3)
-      '@walletconnect/ethereum-provider': registry.npmmirror.com/@walletconnect/ethereum-provider@2.8.0(@walletconnect/modal@2.4.7)
-      '@walletconnect/legacy-provider': registry.npmmirror.com/@walletconnect/legacy-provider@2.0.0
+      '@walletconnect/ethereum-provider': registry.npmmirror.com/@walletconnect/ethereum-provider@2.8.0(@walletconnect/modal@2.4.7)(encoding@0.1.13)(lokijs@1.5.12)
+      '@walletconnect/legacy-provider': registry.npmmirror.com/@walletconnect/legacy-provider@2.0.0(encoding@0.1.13)
       '@walletconnect/modal': registry.npmmirror.com/@walletconnect/modal@2.4.7(react@18.2.0)
       abitype: registry.npmmirror.com/abitype@0.8.7(typescript@5.1.3)
       eventemitter3: registry.npmmirror.com/eventemitter3@4.0.7
@@ -1785,7 +2063,7 @@ packages:
       - zod
     dev: false
 
-  registry.npmmirror.com/@wagmi/core@1.2.0(react@18.2.0)(typescript@5.1.3)(viem@1.0.7):
+  registry.npmmirror.com/@wagmi/core@1.2.0(encoding@0.1.13)(lokijs@1.5.12)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7):
     resolution: {integrity: sha512-7onf13u0atdXOnoitB+pivnIUPJman7Y8GITKkxwmcwJ3lpE1U/grYE7xHcKN7av7KEu0DozvKPhN7nJ/7OErw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@wagmi/core/-/core-1.2.0.tgz}
     id: registry.npmmirror.com/@wagmi/core/1.2.0
     name: '@wagmi/core'
@@ -1798,7 +2076,7 @@ packages:
         optional: true
     dependencies:
       '@wagmi/chains': registry.npmmirror.com/@wagmi/chains@1.1.0(typescript@5.1.3)
-      '@wagmi/connectors': registry.npmmirror.com/@wagmi/connectors@2.2.0(@wagmi/chains@1.1.0)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7)
+      '@wagmi/connectors': registry.npmmirror.com/@wagmi/connectors@2.2.0(@wagmi/chains@1.1.0)(encoding@0.1.13)(lokijs@1.5.12)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7)
       abitype: registry.npmmirror.com/abitype@0.8.7(typescript@5.1.3)
       eventemitter3: registry.npmmirror.com/eventemitter3@4.0.7
       typescript: registry.npmmirror.com/typescript@5.1.3
@@ -1817,8 +2095,9 @@ packages:
       - zod
     dev: false
 
-  registry.npmmirror.com/@walletconnect/core@2.8.0:
+  registry.npmmirror.com/@walletconnect/core@2.8.0(lokijs@1.5.12):
     resolution: {integrity: sha512-pl7x4sq1nuU0ixA9wF2ecjDecUzIauKr7ZwC29rs9qTcmDpxgJbbOdZwaSl+dJlf1bHC87adVLf5KAkwwo9PzQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/core/-/core-2.8.0.tgz}
+    id: registry.npmmirror.com/@walletconnect/core/2.8.0
     name: '@walletconnect/core'
     version: 2.8.0
     dependencies:
@@ -1827,14 +2106,14 @@ packages:
       '@walletconnect/jsonrpc-types': registry.npmmirror.com/@walletconnect/jsonrpc-types@1.0.3
       '@walletconnect/jsonrpc-utils': registry.npmmirror.com/@walletconnect/jsonrpc-utils@1.0.8
       '@walletconnect/jsonrpc-ws-connection': registry.npmmirror.com/@walletconnect/jsonrpc-ws-connection@1.0.11
-      '@walletconnect/keyvaluestorage': registry.npmmirror.com/@walletconnect/keyvaluestorage@1.0.2
+      '@walletconnect/keyvaluestorage': registry.npmmirror.com/@walletconnect/keyvaluestorage@1.0.2(lokijs@1.5.12)
       '@walletconnect/logger': registry.npmmirror.com/@walletconnect/logger@2.0.1
       '@walletconnect/relay-api': registry.npmmirror.com/@walletconnect/relay-api@1.0.9
       '@walletconnect/relay-auth': registry.npmmirror.com/@walletconnect/relay-auth@1.0.4
       '@walletconnect/safe-json': registry.npmmirror.com/@walletconnect/safe-json@1.0.2
       '@walletconnect/time': registry.npmmirror.com/@walletconnect/time@1.0.2
-      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0
-      '@walletconnect/utils': registry.npmmirror.com/@walletconnect/utils@2.8.0
+      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0(lokijs@1.5.12)
+      '@walletconnect/utils': registry.npmmirror.com/@walletconnect/utils@2.8.0(lokijs@1.5.12)
       events: registry.npmmirror.com/events@3.3.0
       lodash.isequal: registry.npmmirror.com/lodash.isequal@4.5.0
       uint8arrays: registry.npmmirror.com/uint8arrays@3.1.1
@@ -1876,7 +2155,7 @@ packages:
       tslib: registry.npmmirror.com/tslib@1.14.1
     dev: false
 
-  registry.npmmirror.com/@walletconnect/ethereum-provider@2.8.0(@walletconnect/modal@2.4.7):
+  registry.npmmirror.com/@walletconnect/ethereum-provider@2.8.0(@walletconnect/modal@2.4.7)(encoding@0.1.13)(lokijs@1.5.12):
     resolution: {integrity: sha512-nVVJtZUpoeurFjoEPYlrUHkT3YleCpEC9YAMKJyEIB3MZZInttcGxGyi0vwFQ+trCfuX8RrdKUPQ952NvxvCvw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/ethereum-provider/-/ethereum-provider-2.8.0.tgz}
     id: registry.npmmirror.com/@walletconnect/ethereum-provider/2.8.0
     name: '@walletconnect/ethereum-provider'
@@ -1887,15 +2166,15 @@ packages:
       '@walletconnect/modal':
         optional: true
     dependencies:
-      '@walletconnect/jsonrpc-http-connection': registry.npmmirror.com/@walletconnect/jsonrpc-http-connection@1.0.7
+      '@walletconnect/jsonrpc-http-connection': registry.npmmirror.com/@walletconnect/jsonrpc-http-connection@1.0.7(encoding@0.1.13)
       '@walletconnect/jsonrpc-provider': registry.npmmirror.com/@walletconnect/jsonrpc-provider@1.0.13
       '@walletconnect/jsonrpc-types': registry.npmmirror.com/@walletconnect/jsonrpc-types@1.0.3
       '@walletconnect/jsonrpc-utils': registry.npmmirror.com/@walletconnect/jsonrpc-utils@1.0.8
       '@walletconnect/modal': registry.npmmirror.com/@walletconnect/modal@2.4.7(react@18.2.0)
-      '@walletconnect/sign-client': registry.npmmirror.com/@walletconnect/sign-client@2.8.0
-      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0
-      '@walletconnect/universal-provider': registry.npmmirror.com/@walletconnect/universal-provider@2.8.0
-      '@walletconnect/utils': registry.npmmirror.com/@walletconnect/utils@2.8.0
+      '@walletconnect/sign-client': registry.npmmirror.com/@walletconnect/sign-client@2.8.0(lokijs@1.5.12)
+      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0(lokijs@1.5.12)
+      '@walletconnect/universal-provider': registry.npmmirror.com/@walletconnect/universal-provider@2.8.0(encoding@0.1.13)(lokijs@1.5.12)
+      '@walletconnect/utils': registry.npmmirror.com/@walletconnect/utils@2.8.0(lokijs@1.5.12)
       events: registry.npmmirror.com/events@3.3.0
     transitivePeerDependencies:
       - '@react-native-async-storage/async-storage'
@@ -1925,14 +2204,15 @@ packages:
       tslib: registry.npmmirror.com/tslib@1.14.1
     dev: false
 
-  registry.npmmirror.com/@walletconnect/jsonrpc-http-connection@1.0.7:
+  registry.npmmirror.com/@walletconnect/jsonrpc-http-connection@1.0.7(encoding@0.1.13):
     resolution: {integrity: sha512-qlfh8fCfu8LOM9JRR9KE0s0wxP6ZG9/Jom8M0qsoIQeKF3Ni0FyV4V1qy/cc7nfI46SLQLSl4tgWSfLiE1swyQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/jsonrpc-http-connection/-/jsonrpc-http-connection-1.0.7.tgz}
+    id: registry.npmmirror.com/@walletconnect/jsonrpc-http-connection/1.0.7
     name: '@walletconnect/jsonrpc-http-connection'
     version: 1.0.7
     dependencies:
       '@walletconnect/jsonrpc-utils': registry.npmmirror.com/@walletconnect/jsonrpc-utils@1.0.8
       '@walletconnect/safe-json': registry.npmmirror.com/@walletconnect/safe-json@1.0.2
-      cross-fetch: registry.npmmirror.com/cross-fetch@3.1.6
+      cross-fetch: registry.npmmirror.com/cross-fetch@3.1.6(encoding@0.1.13)
       tslib: registry.npmmirror.com/tslib@1.14.1
     transitivePeerDependencies:
       - encoding
@@ -1982,8 +2262,9 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmmirror.com/@walletconnect/keyvaluestorage@1.0.2:
+  registry.npmmirror.com/@walletconnect/keyvaluestorage@1.0.2(lokijs@1.5.12):
     resolution: {integrity: sha512-U/nNG+VLWoPFdwwKx0oliT4ziKQCEoQ27L5Hhw8YOFGA2Po9A9pULUYNWhDgHkrb0gYDNt//X7wABcEWWBd3FQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/keyvaluestorage/-/keyvaluestorage-1.0.2.tgz}
+    id: registry.npmmirror.com/@walletconnect/keyvaluestorage/1.0.2
     name: '@walletconnect/keyvaluestorage'
     version: 1.0.2
     peerDependencies:
@@ -1995,6 +2276,7 @@ packages:
       lokijs:
         optional: true
     dependencies:
+      lokijs: 1.5.12
       safe-json-utils: registry.npmmirror.com/safe-json-utils@1.1.1
       tslib: registry.npmmirror.com/tslib@1.14.1
     dev: false
@@ -2028,12 +2310,13 @@ packages:
       qrcode: registry.npmmirror.com/qrcode@1.5.3
     dev: false
 
-  registry.npmmirror.com/@walletconnect/legacy-provider@2.0.0:
+  registry.npmmirror.com/@walletconnect/legacy-provider@2.0.0(encoding@0.1.13):
     resolution: {integrity: sha512-A8xPebMI1A+50HbWwTpFCbwP7G+1NGKdTKyg8BUUg3h3Y9JucpC1W6w/x0v1Xw7qFEqQnz74LoIN/A3ytH9xrQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/legacy-provider/-/legacy-provider-2.0.0.tgz}
+    id: registry.npmmirror.com/@walletconnect/legacy-provider/2.0.0
     name: '@walletconnect/legacy-provider'
     version: 2.0.0
     dependencies:
-      '@walletconnect/jsonrpc-http-connection': registry.npmmirror.com/@walletconnect/jsonrpc-http-connection@1.0.7
+      '@walletconnect/jsonrpc-http-connection': registry.npmmirror.com/@walletconnect/jsonrpc-http-connection@1.0.7(encoding@0.1.13)
       '@walletconnect/jsonrpc-provider': registry.npmmirror.com/@walletconnect/jsonrpc-provider@1.0.13
       '@walletconnect/legacy-client': registry.npmmirror.com/@walletconnect/legacy-client@2.0.0
       '@walletconnect/legacy-modal': registry.npmmirror.com/@walletconnect/legacy-modal@2.0.0
@@ -2128,19 +2411,20 @@ packages:
       tslib: registry.npmmirror.com/tslib@1.14.1
     dev: false
 
-  registry.npmmirror.com/@walletconnect/sign-client@2.8.0:
+  registry.npmmirror.com/@walletconnect/sign-client@2.8.0(lokijs@1.5.12):
     resolution: {integrity: sha512-+l9qwvVeUGk0fBQsgx6yb6hdGYt8uQ3a9jR9GgsJvm8FjFh1oUzTKqFnG7XdhCBnzFnbSoLr41Xe8PbN8qoUSw==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/sign-client/-/sign-client-2.8.0.tgz}
+    id: registry.npmmirror.com/@walletconnect/sign-client/2.8.0
     name: '@walletconnect/sign-client'
     version: 2.8.0
     dependencies:
-      '@walletconnect/core': registry.npmmirror.com/@walletconnect/core@2.8.0
+      '@walletconnect/core': registry.npmmirror.com/@walletconnect/core@2.8.0(lokijs@1.5.12)
       '@walletconnect/events': registry.npmmirror.com/@walletconnect/events@1.0.1
       '@walletconnect/heartbeat': registry.npmmirror.com/@walletconnect/heartbeat@1.2.1
       '@walletconnect/jsonrpc-utils': registry.npmmirror.com/@walletconnect/jsonrpc-utils@1.0.8
       '@walletconnect/logger': registry.npmmirror.com/@walletconnect/logger@2.0.1
       '@walletconnect/time': registry.npmmirror.com/@walletconnect/time@1.0.2
-      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0
-      '@walletconnect/utils': registry.npmmirror.com/@walletconnect/utils@2.8.0
+      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0(lokijs@1.5.12)
+      '@walletconnect/utils': registry.npmmirror.com/@walletconnect/utils@2.8.0(lokijs@1.5.12)
       events: registry.npmmirror.com/events@3.3.0
     transitivePeerDependencies:
       - '@react-native-async-storage/async-storage'
@@ -2157,15 +2441,16 @@ packages:
       tslib: registry.npmmirror.com/tslib@1.14.1
     dev: false
 
-  registry.npmmirror.com/@walletconnect/types@2.8.0:
+  registry.npmmirror.com/@walletconnect/types@2.8.0(lokijs@1.5.12):
     resolution: {integrity: sha512-FMeGK3lGXFDwcs5duoN74xL1aLrkgYqnavWE0DnFPt2i1QmSUITU9c8f88EDh8uPXANd2WIYOItm0DVCNxLGGA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/types/-/types-2.8.0.tgz}
+    id: registry.npmmirror.com/@walletconnect/types/2.8.0
     name: '@walletconnect/types'
     version: 2.8.0
     dependencies:
       '@walletconnect/events': registry.npmmirror.com/@walletconnect/events@1.0.1
       '@walletconnect/heartbeat': registry.npmmirror.com/@walletconnect/heartbeat@1.2.1
       '@walletconnect/jsonrpc-types': registry.npmmirror.com/@walletconnect/jsonrpc-types@1.0.3
-      '@walletconnect/keyvaluestorage': registry.npmmirror.com/@walletconnect/keyvaluestorage@1.0.2
+      '@walletconnect/keyvaluestorage': registry.npmmirror.com/@walletconnect/keyvaluestorage@1.0.2(lokijs@1.5.12)
       '@walletconnect/logger': registry.npmmirror.com/@walletconnect/logger@2.0.1
       events: registry.npmmirror.com/events@3.3.0
     transitivePeerDependencies:
@@ -2173,19 +2458,20 @@ packages:
       - lokijs
     dev: false
 
-  registry.npmmirror.com/@walletconnect/universal-provider@2.8.0:
+  registry.npmmirror.com/@walletconnect/universal-provider@2.8.0(encoding@0.1.13)(lokijs@1.5.12):
     resolution: {integrity: sha512-BMsGiINI3rT7DRyDJM7miuWG6vDVE0PV6zMcCXIMDYYPay7zFvJxv2VHEx9an4MutrvQR76NTRyG//i1K84VOQ==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/universal-provider/-/universal-provider-2.8.0.tgz}
+    id: registry.npmmirror.com/@walletconnect/universal-provider/2.8.0
     name: '@walletconnect/universal-provider'
     version: 2.8.0
     dependencies:
-      '@walletconnect/jsonrpc-http-connection': registry.npmmirror.com/@walletconnect/jsonrpc-http-connection@1.0.7
+      '@walletconnect/jsonrpc-http-connection': registry.npmmirror.com/@walletconnect/jsonrpc-http-connection@1.0.7(encoding@0.1.13)
       '@walletconnect/jsonrpc-provider': registry.npmmirror.com/@walletconnect/jsonrpc-provider@1.0.13
       '@walletconnect/jsonrpc-types': registry.npmmirror.com/@walletconnect/jsonrpc-types@1.0.3
       '@walletconnect/jsonrpc-utils': registry.npmmirror.com/@walletconnect/jsonrpc-utils@1.0.8
       '@walletconnect/logger': registry.npmmirror.com/@walletconnect/logger@2.0.1
-      '@walletconnect/sign-client': registry.npmmirror.com/@walletconnect/sign-client@2.8.0
-      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0
-      '@walletconnect/utils': registry.npmmirror.com/@walletconnect/utils@2.8.0
+      '@walletconnect/sign-client': registry.npmmirror.com/@walletconnect/sign-client@2.8.0(lokijs@1.5.12)
+      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0(lokijs@1.5.12)
+      '@walletconnect/utils': registry.npmmirror.com/@walletconnect/utils@2.8.0(lokijs@1.5.12)
       eip1193-provider: registry.npmmirror.com/eip1193-provider@1.0.1
       events: registry.npmmirror.com/events@3.3.0
     transitivePeerDependencies:
@@ -2197,8 +2483,9 @@ packages:
       - utf-8-validate
     dev: false
 
-  registry.npmmirror.com/@walletconnect/utils@2.8.0:
+  registry.npmmirror.com/@walletconnect/utils@2.8.0(lokijs@1.5.12):
     resolution: {integrity: sha512-Q8OwMtUevIn1+64LXyTMLlhH58k3UOAjU5b3smYZ7CEEmwEGpOTfTDAWrB3v+ZDIhjyqP94+8fuvKIbcVLKLWA==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/@walletconnect/utils/-/utils-2.8.0.tgz}
+    id: registry.npmmirror.com/@walletconnect/utils/2.8.0
     name: '@walletconnect/utils'
     version: 2.8.0
     dependencies:
@@ -2210,7 +2497,7 @@ packages:
       '@walletconnect/relay-api': registry.npmmirror.com/@walletconnect/relay-api@1.0.9
       '@walletconnect/safe-json': registry.npmmirror.com/@walletconnect/safe-json@1.0.2
       '@walletconnect/time': registry.npmmirror.com/@walletconnect/time@1.0.2
-      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0
+      '@walletconnect/types': registry.npmmirror.com/@walletconnect/types@2.8.0(lokijs@1.5.12)
       '@walletconnect/window-getters': registry.npmmirror.com/@walletconnect/window-getters@1.0.1
       '@walletconnect/window-metadata': registry.npmmirror.com/@walletconnect/window-metadata@1.0.1
       detect-browser: registry.npmmirror.com/detect-browser@5.3.0
@@ -2835,12 +3122,13 @@ packages:
       toggle-selection: registry.npmmirror.com/toggle-selection@1.0.6
     dev: false
 
-  registry.npmmirror.com/cross-fetch@3.1.6:
+  registry.npmmirror.com/cross-fetch@3.1.6(encoding@0.1.13):
     resolution: {integrity: sha512-riRvo06crlE8HiqOwIpQhxwdOk4fOeR7FVM/wXoxchFEqMNUjvbs3bfo4OTgMEMHzppd4DxFBDbyySj8Cv781g==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/cross-fetch/-/cross-fetch-3.1.6.tgz}
+    id: registry.npmmirror.com/cross-fetch/3.1.6
     name: cross-fetch
     version: 3.1.6
     dependencies:
-      node-fetch: registry.npmmirror.com/node-fetch@2.6.11
+      node-fetch: registry.npmmirror.com/node-fetch@2.6.11(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -4907,8 +5195,9 @@ packages:
     version: 2.0.2
     dev: false
 
-  registry.npmmirror.com/node-fetch@2.6.11:
+  registry.npmmirror.com/node-fetch@2.6.11(encoding@0.1.13):
     resolution: {integrity: sha512-4I6pdBY1EthSqDmJkiNk3JIT8cswwR9nfeW/cPdUagJYEQG7R95WRH74wpz7ma8Gh/9dI9FP+OU+0E4FvtA55w==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/node-fetch/-/node-fetch-2.6.11.tgz}
+    id: registry.npmmirror.com/node-fetch/2.6.11
     name: node-fetch
     version: 2.6.11
     engines: {node: 4.x || >=6.0.0}
@@ -4918,6 +5207,7 @@ packages:
       encoding:
         optional: true
     dependencies:
+      encoding: 0.1.13
       whatwg-url: registry.npmmirror.com/whatwg-url@5.0.0
     dev: false
 
@@ -6466,7 +6756,7 @@ packages:
       - zod
     dev: false
 
-  registry.npmmirror.com/wagmi@1.2.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7):
+  registry.npmmirror.com/wagmi@1.2.0(encoding@0.1.13)(lokijs@1.5.12)(react-dom@18.2.0)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7):
     resolution: {integrity: sha512-VSSBEVDMZAWIcWTlewC1XypHsWa1FdkdYXWdgu5pqTCqnW6JKWGsR5TbQY3poCIQoC7B2okisElZT2oVSYbA5Q==, registry: https://registry.npmjs.org/, tarball: https://registry.npmmirror.com/wagmi/-/wagmi-1.2.0.tgz}
     id: registry.npmmirror.com/wagmi/1.2.0
     name: wagmi
@@ -6482,7 +6772,7 @@ packages:
       '@tanstack/query-sync-storage-persister': registry.npmmirror.com/@tanstack/query-sync-storage-persister@4.29.14
       '@tanstack/react-query': registry.npmmirror.com/@tanstack/react-query@4.29.14(react-dom@18.2.0)(react@18.2.0)
       '@tanstack/react-query-persist-client': registry.npmmirror.com/@tanstack/react-query-persist-client@4.29.14(@tanstack/react-query@4.29.14)
-      '@wagmi/core': registry.npmmirror.com/@wagmi/core@1.2.0(react@18.2.0)(typescript@5.1.3)(viem@1.0.7)
+      '@wagmi/core': registry.npmmirror.com/@wagmi/core@1.2.0(encoding@0.1.13)(lokijs@1.5.12)(react@18.2.0)(typescript@5.1.3)(viem@1.0.7)
       abitype: registry.npmmirror.com/abitype@0.8.7(typescript@5.1.3)
       react: registry.npmmirror.com/react@18.2.0
       typescript: registry.npmmirror.com/typescript@5.1.3

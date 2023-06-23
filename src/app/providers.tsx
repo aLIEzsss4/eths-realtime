@@ -25,10 +25,16 @@ const connectors = connectorsForWallets([
   {
     groupName: 'Recommended',
     wallets: [
-      metaMaskWallet({ chains }),
+      metaMaskWallet({ chains,projectId:'Recommended'  }),
     ],
   }
 ])
+
+// const { connectors } = getDefaultWallets({
+//   appName: 'My RainbowKit App',
+//   projectId: 'YOUR_PROJECT_ID',
+//   chains
+// });
 
 const wagmiConfig = createConfig({
   autoConnect: true,
@@ -42,7 +48,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
  
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains} >
+      <RainbowKitProvider chains={chains}>
         {children}
       </RainbowKitProvider>
     </WagmiConfig>

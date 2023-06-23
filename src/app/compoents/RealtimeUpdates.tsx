@@ -14,6 +14,7 @@ function RealtimeUpdates() {
     const eventSource = new EventSource('/api/realtime');
 
     eventSource.onmessage = (event) => {
+      // console.log({event})
       setMessages((prevMessages) => [...prevMessages, JSON.parse(event.data)]);
     };
 
