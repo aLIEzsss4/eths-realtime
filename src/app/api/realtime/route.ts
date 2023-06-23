@@ -2,7 +2,7 @@ import supabase from '../../supabase';
 import EventSource from "eventsource";
 import { NextApiRequest, NextApiResponse } from 'next';
 // should be declared (!)
-// export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic';
 export const runtime = "edge"
 
 
