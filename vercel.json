@@ -1,7 +1,6 @@
 {
     "functions": {
         "api/realtime.js": {
-            "memory": 3008,
             "maxDuration": 10
         }
     }
