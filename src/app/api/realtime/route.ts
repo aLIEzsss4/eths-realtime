@@ -3,8 +3,8 @@ import { createClient } from '@supabase/supabase-js';
 import  EventSource  from "eventsource";
 
 // should be declared (!)
-// export const dynamic = 'force-dynamic';
-export const runtime = "nodejs"
+export const dynamic = 'force-dynamic';
+export const runtime = "edge"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
