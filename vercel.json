@@ -1,7 +1,0 @@
-{
-    "functions": {
-        "api/realtime.js": {
-            "maxDuration": 10
-        }
-    }
-}
